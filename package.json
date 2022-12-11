@@ -1,0 +1,28 @@
+{
+  "name": "tubeskelompok",
+  "version": "1.0.0",
+  "description": "Untuk memenuhi tugas besar manajemen proyek",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelHendrajat/TubesKelompok.git"
+  },
+  "author": "Rafael H, M Fazri, Stanley Jo, Ranguasaman ~",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelHendrajat/TubesKelompok/issues"
+  },
+  "homepage": "https://github.com/RafaelHendrajat/TubesKelompok#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
