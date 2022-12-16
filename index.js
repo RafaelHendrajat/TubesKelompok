@@ -73,12 +73,100 @@ const getDataBook1 = (conn) => {
         })
     })
 }
+const getDataBook2 = (conn) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * FROM book2`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(result);
+            }
+        })
+    })
+}
+const getDataBook3 = (conn) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * FROM book3`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(result);
+            }
+        })
+    })
+}
+const getDataBook4 = (conn) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * FROM book4`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(result);
+            }
+        })
+    })
+}
+const getDataBook5 = (conn) => {
+    return new Promise ((resolve, rejects) => {
+        conn.query(`SELECT * FROM book5`, (err, result) => {
+            if (err)
+            {
+                rejects(err);
+            }
+            else
+            {
+                resolve(result);
+            }
+        })
+    })
+}
 
 app.get('/pencarian', async (req, res) => {
     const conn = await dbConnect();
     var book1= await getDataBook1(conn);
     conn.release();
     res.render('pencarian',{
+        book1
+    });
+});
+app.get('/pencarian2', async (req, res) => {
+    const conn = await dbConnect();
+    var book1= await getDataBook2(conn);
+    conn.release();
+    res.render('pencarian2',{
+        book1
+    });
+});
+app.get('/pencarian3', async (req, res) => {
+    const conn = await dbConnect();
+    var book1= await getDataBook3(conn);
+    conn.release();
+    res.render('pencarian3',{
+        book1
+    });
+});
+app.get('/pencarian4', async (req, res) => {
+    const conn = await dbConnect();
+    var book1= await getDataBook4(conn);
+    conn.release();
+    res.render('pencarian4',{
+        book1
+    });
+});
+app.get('/pencarian5', async (req, res) => {
+    const conn = await dbConnect();
+    var book1= await getDataBook5(conn);
+    conn.release();
+    res.render('pencarian5',{
         book1
     });
 });
