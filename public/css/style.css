@@ -5,6 +5,17 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+.page-link{
+	background-color: #d6a100 !important;
+	color: #FFF !important;
+}
+.white{
+	background-color: #FFF;
+	font-weight: bolder;
+}
+.black{
+	background-color: #000;
+}
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -47,7 +58,9 @@ body{
 	position: relative;
 	display: flex;
   }
-  
+  .gambar:hover{
+	border: solid #d6a100;
+  }
   .searchTerm {
 	width: 100%;
 	border: 3px solid #d6a100;
@@ -63,10 +76,32 @@ body{
   .searchTerm:focus{
 	color: #d6a100;
   }
+  #pagination-container {
+	margin-top: 50px;
+    bottom: 0;
+	text-align: center;
+	width: 47.5%;
+	overflow-x: scroll;
+	margin-left: 500px;
+}
+.data-wrapper{
+	margin-left: 500px;
+	margin-right: 500px;
+}
+.oneDataContainer{
+	text-align: center;
+    display: grid;
+    grid-template-areas: 'source target weight';
+    grid-template-columns: 300px 300px 278px;
+    border-color: #d6a100;
+	color: #d6a100;
+    border-style: solid;
+    padding: 10px;
+}
   
   .searchButton {
 	width: 40px;
-	height: 48px;
+	height: 38px;
 	border: 1px solid #d6a100;
 	background: #d6a100;
 	text-align: center;
@@ -75,11 +110,18 @@ body{
 	cursor: pointer;
 	font-size: 20px;
   }
-  
-  /*Resize the wrap to see the search bar change!*/
+  button.active {
+	color: #fac832;
+  font-weight: 600;
+  border: 1px solid #fac832;
+}	
+  button{
+	font-size: 16px;
+  }
+  /*Resize the wrap to see the searchbar change!*/
   .wrap{
 	width: 40%;
-	position: absolute;
+	position:relative;
 	top: 30%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -216,6 +258,25 @@ ul.callbacks_tabs.callbacks1_tabs {
 	z-index: 999;
 	left: 46%;
 	display: none;
+}
+.hidden{
+    display: none;
+}
+.btn-group{
+    margin: 20px;
+}
+
+.group-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.btnCari-container{
+    margin: 20px;
+}
+
+#btn-cari{
+    width: 100px;
 }
 .callbacks_nav {
   position: absolute;
