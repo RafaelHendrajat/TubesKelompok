@@ -2,6 +2,10 @@ import express from "express";
 import path from "path";
 import { home } from "./controller/home.js";
 import { graftakberarah } from "./controller/graftakberarah.js";
+import { graftakberarah2 } from "./controller/graftakberarah2.js";
+import { graftakberarah3 } from "./controller/graftakberarah3.js";
+import { graftakberarah4 } from "./controller/graftakberarah4.js";
+import { graftakberarah5 } from "./controller/graftakberarah5.js";
 import { grafikBar } from "./controller/grafikBar.js";
 import { grafikBar2 } from "./controller/grafikBar2.js";
 import { grafikBar3 } from "./controller/grafikBar3.js";
@@ -24,7 +28,11 @@ app.use(express.json());
 
 app.use("/", home);
 
-app.use("/graftakberarah", graftakberarah);
+app.use("/graftakberarah/book1", graftakberarah);
+app.use("/graftakberarah/book2", graftakberarah2);
+app.use("/graftakberarah/book3", graftakberarah3);
+app.use("/graftakberarah/book4", graftakberarah4);
+app.use("/graftakberarah/book5", graftakberarah5);
 
 app.use("/grafikBar/book1", grafikBar);
 app.use("/grafikBar/book2", grafikBar2);

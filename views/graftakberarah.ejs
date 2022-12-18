@@ -16,14 +16,15 @@ And I have add comment in code.
 <html>
 <head>
 <title>Game Of Thrones</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/swipebox.css">
-
+<link rel="stylesheet" href="/css/swipebox.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/js/pencarian.js" defer></script>
 </head>
  
 
@@ -32,7 +33,7 @@ And I have add comment in code.
 		<div class="header-top">
 				<div class="container">
 			<div class="logo">
-				<a href="/"><img src="images/logo.png"></a><!--Put your logo here-->
+				<a href="/"><img src="/images/logo.png"></a><!--Put your logo here-->
 				</div>
 				<div class="top-menu">
 					<span class="menu"> </span>
@@ -40,9 +41,9 @@ And I have add comment in code.
 				<ul>
 					<ul>
 						<li><a href="/" class="scroll" class="scroll">home</a></li>
-							<li><a href="grafikbar" class="scroll">Grafik Bar</a></li>
-								 <li><a href="pencarian/book1" class="scroll">Pencarian</a></li>
-									 <li><a href="graftakberarah" class="active">Graf tidak berarah</a></li>
+							<li><a href="/grafikbar/book1" class="scroll">Grafik Bar</a></li>
+								 <li><a href="/pencarian/book1" class="scroll">Pencarian</a></li>
+									 <li><a href="/graftakberarah/book1" class="active">Graf tidak berarah</a></li>
 							</ul>
 						<!--End Menu-->
 					</div>
@@ -72,10 +73,49 @@ And I have add comment in code.
 								<a href="book4"><img class= "gambar" src="/images/book4.jpg" style="height: 5%; width: 5%;"></a>
 								<a href="book5"><img class= "gambar" src="/images/book5.jpg" style="height: 5%; width: 5%;"></a>
 							</div>
+							<div>
+								<canvas id="myChart"></canvas>
+							  </div>
 							<div class="wrap">
 							 </div>
 						 </div>
 				   </div>
+
+				  
+				  <script>
+					const labels = [
+					'Robert-Baratheon',
+					'Robb-Stark',
+					'Sansa-Stark',
+					'Drogo',
+					'Sansa-Stark',
+					'Petyr-Baelish',
+					'Jon-Snow',
+					'Samwell-Tarly',
+					'Jorah-Mormont',
+					'Robert-Baratheon',
+				  ];
+				  const data = {
+					labels: labels,
+					datasets: [{
+					  label: 'TOP 10 WEIGHT',
+					  backgroundColor: 'rgb(0,0,255)',
+					  borderColor: 'rgb(0,0,255)',
+					  data: [291, 112, 104, 101, 87, 81, 81, 81, 75, 72],
+					}]
+				  };
+					
+					const config = {
+					type: 'scatter',
+					data: data,
+					options: {}
+				  };
+					
+					var myChart = new Chart(
+					  document.getElementById('myChart'),
+					  config
+					);
+				  </script>
 </div> <!--End Slider Section-->
 
 	</body>
